@@ -10,6 +10,9 @@ class Register extends Controller
     public function register()
     {
         $regionData = Region::all();
-        return view("Auth/register", ['data' => $regionData]);
+        return view("Auth/register", [
+            'data' => $regionData,
+            ''
+        ]);
     }
 }

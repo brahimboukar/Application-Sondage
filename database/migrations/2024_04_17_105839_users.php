@@ -25,7 +25,7 @@ return new class extends Migration
             $table->foreign('id_sexe')->references('id')->on('sexes')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->foreign('id_region')->references('id')->on('regions')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->foreign('id_fonction')->references('id')->on('fonctions')->onDelete('CASCADE')->onUpdate('CASCADE');
-            $table->foreign('id_fonction_details')->references('id')->on('fonction_detailers')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('id_fonction_details')->references('id')->on('fonction_detailes')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('telephone');
             $table->string('password');

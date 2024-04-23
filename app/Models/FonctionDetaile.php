@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class FonctionDetaile extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'libelle',
+        'fonction_id'
+    ];
 }

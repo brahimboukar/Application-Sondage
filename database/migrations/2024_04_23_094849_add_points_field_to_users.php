@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fonction_detailes', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('fonction_id');
-            $table->foreign('fonction_id')->references('id')->on('fonctions')->onDelete('CASCADE')->onUpdate('CASCADE');
-            $table->string('libelle');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('points')->default(0)->after('telephone');
         });
     }
 
@@ -29,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('points');
+        });
     }
 };
